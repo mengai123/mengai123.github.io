@@ -7,22 +7,22 @@ date: 2017-02-16 18:32:24.000000000 +09:00
 最近做直播APP，坑爹的产品想要实现一个礼物列表，列表中有多种类型的礼物，每个类型下面又有n个礼物，礼物分页展示，可以左右滑动，当滑到分类最后一页自动切换到下个分类，且礼物列表支持横竖屏切换。
 > 备注：下文中“每一类”、“组”和“类别”概念相同，都指一类礼物
 
-#####横竖屏切换：
+##### 横竖屏切换：
 **竖屏时**，每个分类要显示当前多少页，以及定位当前第几页，当`pageCount`<=1时，不显示页码。
 **横屏时**，不显示页码，左右滑动可以切换类别，同一类别可以上下滑动。
 
 工程地址：https://github.com/ma762614600/MAHorizontalCollectionView
 
 先看一下效果图gif：
-![演示.gif](https://github.com/mengai123/mengai123.github.io/blob/master/assets/images/ios-uiicollectionview-horizontal-slider/demo-show.gif)
+![demo-show.gif](https://mengai123.github.io/assets/images/ios-uiicollectionview-horizontal-slider/demo-show.gif)
 
 
-#####实现思路：
+##### 实现思路：
 第一眼看到这个需求，就确定通过`UICollectionView`实现，但是`UICollectionView`并不支持横向换行分页，后来通过网上找了个第三方类进行修改，支持了横向换行分页，但是滑到分类最后一页不能自动切换到下个分类，分类之间只能通过点击tab切换，由于向产品各种保证二期修改 o(╯□╰)o，第一版就这样勉强上线了。
 
 二期：经过仔细分析需求和对以后产品扩展，以及一些零碎的用户体验等综合考虑，决定采用下面实现方法，也即是目前实现方法。
 
-#####实现方法：
+##### 实现方法：
 1.横屏和竖屏各写一套布局，`MAItemListPortraitView`是竖屏布局，`MAItemListLandscapeView`是横屏布局，将两个布局加到父视图`MAItemListView`上，默认是竖屏布局。当用户旋转手机屏幕，触发方法，动态切换布局：横屏时隐藏竖屏布局，显示横屏布局；竖屏时隐藏横屏布局，显示竖屏布局。
 
 2.竖屏时`MAItemListPortraitView`：
@@ -37,7 +37,7 @@ date: 2017-02-16 18:32:24.000000000 +09:00
 为了既能左右滑动切换不同类别礼物，又能在同一类别中上下滑动查看该类别全部礼物，最底层是一个`UIScrollView`，设置只能横向滑动，然后为每个类别初始化一个`UICollectionView`，将`UICollectionView`加到`UIScrollView`上，`UICollectionView`设置只能竖向滑动。
 
 
-#####具体实现 及 核心代码
+##### 具体实现 及 核心代码
 
 UIViewController接受sizeClass变化回调，在其中触发`MAItemListView `的布局改变：
 ```
@@ -157,12 +157,12 @@ typedef NS_ENUM(NSInteger, ItemListViewLayoutType) {
 4.滑动ScrollView，实现分页效果：
 在`scrollViewDidEndDecelerating`方法中计算UIScrollView或UICollectionView的偏移量，来计算当前是第几组、该组有多少页以及当前是第几页。
 
-#####注意事项
+##### 注意事项
 1.使用```- (void)scrollRectToVisible:(CGRect)rect animated:(BOOL)animated;```方法设置滚动时，一定要设置UIScrollView的`contentSize`。但在我的开发过程中，这个方法有时会失灵(原因不详)，推荐使用``` - (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;```设置滚动。
 
 2.在Autolayout与frame混用时，在设置完约束后要紧接着调用```[self layoutIfNeeded]```进行重绘，否则会出现UIView的frame为(0,0,0,0)的情况。
 
-#####备注
+##### 备注
 1.demo中的```- (void)locatedItem:(MAApiItemItemModel *)itemModel positionBlock:(void(^)(CGRect frame,CGPoint point))block```方法是为了计算竖屏(横屏)选中的cell在横屏(竖屏)中的位置。
 
 2.不经常写文章，在这班门弄斧了，水平有限，如若发现有错误或者有更好的实现方法，欢迎留言沟通。
