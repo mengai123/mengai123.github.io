@@ -14,7 +14,7 @@ date: 2017-02-16 18:32:24.000000000 +09:00
 工程地址：https://github.com/ma762614600/MAHorizontalCollectionView
 
 先看一下效果图gif：
-![demo-show.gif](https://mengai123.github.io/assets/images/ios-uiicollectionview-horizontal-slider/demo-show.gif)
+![demo-show.gif](https://mengai123.github.io/assets/images/article-images/ios-uiicollectionview-demo-show.gif)
 
 
 ##### 实现思路：
