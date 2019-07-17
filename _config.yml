@@ -1,8 +1,8 @@
 # Basic
 title: MengAi's Blog
-subtitle: mengai的技术博客
+subtitle: 做最好的自己！
 welcome_message: 移动开发经验记录和分享.
-description: 做最好的自己！
+description: 嗨，iOS & RN开发，顺带写写小程序，坐标杭州。
 #creator: <a href="http://onev.cat">@onevcat</a>
 
 url: "https://github.com/mengai123"
@@ -22,7 +22,7 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: 主页, description: GitHub主页, url: 'https://github.com/mengai123'}
+    - {title: GitHub主页, description: GitHub主页, url: 'https://github.com/mengai123'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
