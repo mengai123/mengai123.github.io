@@ -1,11 +1,11 @@
 # Basic
 title: MengAi's Blog
 subtitle: mengai的技术博客
-welcome_message: 移动开发经验分享.
-description: 有任何问题，可以发邮件给我.
+welcome_message: 移动开发经验记录和分享.
+description: 做最好的自己！
 #creator: <a href="http://onev.cat">@onevcat</a>
 
-url: "http://vno.onevcat.com"
+url: "https://github.com/mengai123"
 
 permalink: /:year/:month/:title/
 
@@ -17,12 +17,12 @@ cover_color: slate
 
 # The blog button should not be removed.
 blog_button:
-    title: Blog
-    description: Visit blog
+    title: 文章
+    description: 文章列表
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+    - {title: 主页, description: GitHub主页, url: 'https://github.com/mengai123'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
@@ -44,6 +44,6 @@ social:
     mail: 762614600@qq.com
 
 # Google Analytics
-ga:
+#ga:
     # id: your_ga_id
     # host: your_host
