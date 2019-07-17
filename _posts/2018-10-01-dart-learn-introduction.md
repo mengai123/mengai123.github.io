@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dart语言学习笔记 —— Dart简介
+title: Dart语言学习笔记 — Dart简介
 date: 2018-10-01 18:32:24.000000000 +09:00
 tag: Flutter
 ---
