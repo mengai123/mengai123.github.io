@@ -35,7 +35,7 @@ npm install react-native-deprecated-custom-components
 在~/node_modules/react-native-deprecated-custom-components目录下
 
 目录截图：
-![](https://mengai123.github.io/assets/images/article-images/rn-navigator-code-screenshots.png)
+![](/images/posts/rn-navigator/rn-navigator-code-screenshots.png)
 
 
 **2.使用：**
