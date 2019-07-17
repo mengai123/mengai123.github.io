@@ -9,27 +9,16 @@ date: 2018-01-08 18:32:24.000000000 +09:00
     一、前言
     二、Promise是什么
     三、Promise有什么用
-
     四、Promise的特点
-
     五、Promise基本用法
-
     六、Promise的两个快捷创建方式
-
         1 Promise.resolve()
-
         2 Promise.reject()
-
     七、Promise操作多个异步事件
-
         1 Promise.all()
-
         2 Promise.race()
-    
     八、Promise处理同步操作
-
     九、Promise的链式调用
-
     10 十、Promise的缺点
 
 <h4>一、前言</h4>
