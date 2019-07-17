@@ -2,6 +2,7 @@
 layout: post
 title: 揭开Promise的神秘面纱 - JavaScript
 date: 2018-01-08 18:32:24.000000000 +09:00
+tag: React-Native
 ---
 
 <h4>目录</h4>

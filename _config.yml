@@ -1,5 +1,5 @@
 # Basic
-title: MengAi's Blog
+title: MengAi's 博客
 subtitle: Just do yourself！
 description: 嗨，iOS & RN开发，顺带写写小程序。坐标杭州！
 welcome_message: 移动开发经验记录和分享.
@@ -59,13 +59,13 @@ cover_color: clear
 
 # The blog button should not be removed.
 blog_button:
-    title: 博客主页
+    title: 文章列表
 
 # Navigation buttons in the front page.s
 nav:
-    - {title: 所有文章, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}      
-    - {title: 关于我, description: about, url: '/about'}      
+    - {title: 归档, description: archive, url: '/archive'}
+    - {title: 分类, description: tags, url: '/tags'}
+    - {title: 关于, description: about, url: '/about'}
     
 
 # Pagination

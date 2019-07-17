@@ -2,6 +2,7 @@
 layout: post
 title: ReactNative-Navigator组件使用总结
 date: 2017-11-12 18:32:24.000000000 +09:00
+tag: React-Native
 ---
 
 > 文章描述本人在开发RN跨平台应用时，使用Navigator导航器的一些实践经验，以防忘记，也供他人参考。
